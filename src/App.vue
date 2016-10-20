@@ -8,7 +8,7 @@
 
 <script>
 import Hello from './components/Hello'
-import Demo from './components/Demo'
+import Demo from './Demo'
 
 export default {
   components: {
@@ -45,6 +45,6 @@ body {
 
 .logo {
   width: 100px;
-  height: 100px
+  height: 100px;
 }
 </style>
