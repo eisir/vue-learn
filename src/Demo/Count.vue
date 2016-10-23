@@ -4,8 +4,13 @@
 
 <script>
 export default{
-  data(){
-    return {m:1}
+  data(){    
+    return {m:1};
+  },
+  created(){
+    this.$on('pas',function(para){
+      this.m=para
+    })
   }
 }
 </script>

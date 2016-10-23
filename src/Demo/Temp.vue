@@ -4,7 +4,6 @@
     <div v-once>This will never change:{{msg}}</div>
     <div>normal msg show: {{msg}}</div>
     <button @click='changeMsg'>changeMsg</button>
-
     <h5>rawHtml</h5>
     <div v-html="rawHtml"></div>
 
