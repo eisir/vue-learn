@@ -5,7 +5,7 @@
     <Cart></Cart>
     <Temp></Temp>
     <directive></directive>
-    
+    <div>ming</div>
   </div>
 </template>
 
