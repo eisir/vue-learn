@@ -6,25 +6,33 @@
       "id" : 123,
       "name" : "joke",
       "selected" : "0",
-      "time" : "20160901"
+      "time" : "20160901",
+      "price": "23.00",
+      "number": 2
     },
     {
       "id" : 122,
       "name" : "bob",
       "selected" : "1",
-      "time" : "20160902"
+      "time" : "20160902",
+      "price": "35.10",
+      "number": 1
     },
     {
       "id" : 124,
       "name" : "jim",
       "selected" : "1",
-      "time" : "20160905"
+      "time" : "20160905",
+      "price": "123.00",
+      "number": 4
     },
     {
       "id" : 125,
       "name" : "lose",
       "selected" : "1",
-      "time" : "20160102"
+      "time" : "20160102",
+      "price": "230.00",
+      "number": 1
     }
   ]
 }
