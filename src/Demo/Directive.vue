@@ -1,6 +1,11 @@
 <template>
-    <div class="directive">
-        <input v-focus type="text">
+    <div class="panel panel-default">
+        <div class="panel-heading">Count</div>
+        <div class="panel-body">
+            <div class="directive">
+                <input v-focus type="text">
+            </div>
+        </div>
     </div>
 </template>
 

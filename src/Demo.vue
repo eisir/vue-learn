@@ -1,6 +1,8 @@
 <template>
-  <div class="demo page-header">
+  <div class="demo">
+    <div class="page-header">
     <h3 class="title">{{title}}</h3>
+    </div>
     <Bar v-on:inSwitch='switchs' :bars="bars"></Bar>
     <div class="h600">
       <keep-alive>
@@ -17,12 +19,13 @@ import Cart from './Demo/Cart'
 import Directive from './Demo/Directive'
 import Temp from './Demo/Temp'
 import Count from './Demo/Count'
+import Forms from './Demo/Form'
 var ming=123;
 export default {
   data () {
     return {
       title: 'Demo',
-      bars: ['Cart','Directive','Temp','Count','Form'],
+      bars: ['Cart','Directive','Temp','Count','Forms'],
       isCurrent: ''
       }
   },
@@ -35,7 +38,7 @@ export default {
     Temp,
     Count,
     Bar,
-    Form
+    Forms
   },
   methods:{
     switchs:function(index){
