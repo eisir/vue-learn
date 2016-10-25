@@ -6,7 +6,7 @@
         <input type="checkbox" v-model="selectAll"/> 全选
       </div>
       <div class="items">
-        <div class="item row" v-for="(item, index) in items">
+        <div class="item row" v-for="(item, index) in items" :key="item.id">
           <div class="col-md-1">
             <input type="checkbox" v-bind:value="item.id" v-model="item.selected" >
           </div>          
