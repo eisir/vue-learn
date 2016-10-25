@@ -38,36 +38,36 @@
 </template>
 
 <script>
-export default {
-  data () {
-    return {
-      title: 'A Cart',
-      items:[]
-    }
-  },
-  created(){
-    this.$http.get('data/list.json')
-    .then((res)=>{
-      this.items = res.data.data;
-    })
-  },
-  computed:{
-    selectAll:{
-      get(){
-        let s = true
-        this.items.forEach(function(v){
-          if (v.selected == false)
-            s = false;   
-        })
-        return s;
-      },
-      set(val){
-       this.items.forEach(v=>{
-         v.selected = val;
-       });
+  export default {
+    data () {
+      return {
+        title: 'A Cart',
+        items:[]
       }
     },
-    total:{
+    created(){
+      this.$http.get('data/list.json')
+      .then((res)=>{
+        this.items = res.data.data;
+      })
+    },
+    computed:{
+      selectAll:{
+        get(){
+          let s = true
+          this.items.forEach(function(v){
+            if (v.selected == false)
+              s = false;   
+          })
+          return s;
+        },
+        set(val){
+         this.items.forEach(v=>{
+           v.selected = val;
+         });
+       }
+     },
+     total:{
       get(){
         var t=0;
         this.items.forEach(function(v){
@@ -94,20 +94,20 @@ export default {
 </script>
 
 <style scoped>
-button{
-  outline: none!important;
-}
-.select-title {
-  height:30px;
-  line-height:30px;
-  font-weight:bold;
-}
-.item{
-  line-height: 30px;
-  margin-bottom: 10px;
-}
-.num{
-  line-height: 24px;
-  text-align: center;
-}
+  button{
+    outline: none!important;
+  }
+  .select-title {
+    height:30px;
+    line-height:30px;
+    font-weight:bold;
+  }
+  .item{
+    line-height: 30px;
+    margin-bottom: 10px;
+  }
+  .num{
+    line-height: 24px;
+    text-align: center;
+  }
 </style>

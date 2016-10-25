@@ -20,12 +20,12 @@ import Directive from './Demo/Directive'
 import Temp from './Demo/Temp'
 import Count from './Demo/Count'
 import Forms from './Demo/Form'
-var ming=123;
+import Async from './Demo/Async'
 export default {
   data () {
     return {
       title: 'Demo',
-      bars: ['Cart','Directive','Temp','Count','Forms'],
+      bars: ['Cart','Directive','Temp','Count','Forms','Async'],
       isCurrent: ''
       }
   },
@@ -38,7 +38,8 @@ export default {
     Temp,
     Count,
     Bar,
-    Forms
+    Forms,
+    Async
   },
   methods:{
     switchs:function(index){
