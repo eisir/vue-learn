@@ -14,7 +14,7 @@ export default {
     directives:{
         focus:{
             inserted:function(el){
-                el.focus();
+                el.focus(); 
                 el.value="ming"
             }
         }

@@ -85,7 +85,6 @@
             { text: 'Three', value: 'C' }
           ]
         }
-
 			}
 		}
 	}

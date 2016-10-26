@@ -13,9 +13,13 @@
           <div class="col-md-4">{{ item.name }}</div>
           <div class="col-md-3">
             <div class="input-group">
-              <span class="input-group-btn"><button class="btn btn-default" :class="{disabled:item.number==1}" :disabled="item.number==1" @click="down(index)">-</button></span>
+              <span class="input-group-btn">
+                <button class="btn btn-default" :class="{disabled:item.number==1}" :disabled="item.number==1" @click="down(index)">-</button>
+              </span>
               <input class="num form-control" type="text" name="" v-model="item.number">            
-              <span class="input-group-btn"><button class="btn btn-default" @click="up(index)">+</button></span>
+              <span class="input-group-btn">
+                <button class="btn btn-default" @click="up(index)">+</button>
+              </span>
             </div>
           </div>
           <div class="col-md-2">{{ item.price }}</div>

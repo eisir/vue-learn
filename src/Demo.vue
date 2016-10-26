@@ -6,8 +6,10 @@
     <Bar v-on:inSwitch='switchs' :bars="bars"></Bar>
     <div class="h600">
       <keep-alive>
-        <component :is="isCurrent"></component>
-      </keep-alive>
+        <transition name="component-fade" mode="out-in">
+          <component :is="isCurrent"></component>
+        </transition>
+      </keep-alive>      
     </div>
   </div>
 </template>
@@ -21,11 +23,12 @@ import Temp from './Demo/Temp'
 import Count from './Demo/Count'
 import Forms from './Demo/Form'
 import Async from './Demo/Async'
+import Event from './Demo/Event'
 export default {
   data () {
     return {
       title: 'Demo',
-      bars: ['Cart','Directive','Temp','Count','Forms','Async'],
+      bars: ['Cart','Directive','Temp','Count','Forms','Async','Event'],
       isCurrent: ''
       }
   },
@@ -39,7 +42,8 @@ export default {
     Count,
     Bar,
     Forms,
-    Async
+    Async,
+    Event
   },
   methods:{
     switchs:function(index){
@@ -61,5 +65,11 @@ h1 {
 .h600{
   height:600px;
   padding-top:20px
+}
+.component-fade-enter-active, .component-fade-leave-active {
+  transition: opacity .3s ease;
+}
+.component-fade-enter, .component-fade-leave-active {
+  opacity: 0;
 }
 </style>
