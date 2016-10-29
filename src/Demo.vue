@@ -24,11 +24,15 @@ import Count from './Demo/Count'
 import Forms from './Demo/Form'
 import Async from './Demo/Async'
 import Event from './Demo/Event'
+import Color from './Demo/Color'
+import Trans from './Demo/Transition'
+import Xhr from './Demo/Xhr'
+import Rend from './Demo/Render'
 export default {
   data () {
     return {
       title: 'Demo',
-      bars: ['Cart','Directive','Temp','Count','Forms','Async','Event'],
+      bars: ['Cart','Directive','Temp','Count','Forms','Async','Event','Color','Trans','Xhr','Rend'],
       isCurrent: ''
       }
   },
@@ -43,7 +47,11 @@ export default {
     Bar,
     Forms,
     Async,
-    Event
+    Event,
+    Trans,
+    Xhr,
+    Rend,
+    Color
   },
   methods:{
     switchs:function(index){

@@ -4,7 +4,6 @@ import Vue from 'vue'
 import VueResource from 'vue-resource'
 import Vuex from 'vuex'
 import App from './App'
-import $ from 'jquery'
 
 /* eslint-disable no-new */
 

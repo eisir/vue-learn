@@ -1,28 +1,28 @@
-<template>
+  <template>
     <div class="panel panel-default">
-        <div class="panel-heading">Count</div>
-        <div class="panel-body">
-            <div class="directive">
-                <input v-focus type="text">
-            </div>
+      <div class="panel-heading">Count</div>
+      <div class="panel-body">
+        <div class="directive">
+          <input v-focus type="text">
         </div>
+      </div>
     </div>
-</template>
+  </template>
 
-<script>
-export default {
-    directives:{
+  <script>
+    export default {
+      directives:{
         focus:{
-            inserted:function(el){
-                el.focus(); 
-                el.value="ming"
-            }
+          inserted:function(el){
+            el.focus(); 
+            el.value="ming"
+          }
         }
+      }
     }
-}
-</script>
+  </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped>
+  <!-- Add "scoped" attribute to limit CSS to this component only -->
+  <style scoped>
 
-</style>
+  </style>
