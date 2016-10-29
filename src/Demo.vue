@@ -5,11 +5,11 @@
     </div>
     <Bar v-on:inSwitch='switchs' :bars="bars"></Bar>
     <div class="h600">
-      <keep-alive>
-        <transition name="component-fade" mode="out-in">
+      <transition name="component-fade" mode="out-in">
+        <keep-alive>        
           <component :is="isCurrent"></component>
-        </transition>
-      </keep-alive>      
+        </keep-alive>   
+      </transition>   
     </div>
   </div>
 </template>
