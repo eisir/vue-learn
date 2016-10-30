@@ -15,19 +15,18 @@
 </template>
 
 <script>
-import 'bootstrap/dist/css/bootstrap.min.css'
-import Bar from './Demo/Bar'
-import Cart from './Demo/Cart'
-import Directive from './Demo/Directive'
-import Temp from './Demo/Temp'
-import Count from './Demo/Count'
-import Forms from './Demo/Form'
-import Async from './Demo/Async'
-import Event from './Demo/Event'
-import Color from './Demo/Color'
-import Trans from './Demo/Transition'
-import Xhr from './Demo/Xhr'
-import Rend from './Demo/Render'
+import Bar from '../Demo/Bar'
+import Cart from '../Demo/Cart'
+import Directive from '../Demo/Directive'
+import Temp from '../Demo/Temp'
+import Count from '../Demo/Count'
+import Forms from '../Demo/Form'
+import Async from '../Demo/Async'
+import Event from '../Demo/Event'
+import Color from '../Demo/Color'
+import Trans from '../Demo/Transition'
+import Xhr from '../Demo/Xhr'
+import Rend from '../Demo/Render'
 export default {
   data () {
     return {

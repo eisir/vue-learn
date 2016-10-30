@@ -1,19 +1,20 @@
 <template>
   <div id="app">
-    <img class="logo" src="./assets/logo.png">
-    <hello></hello>
-    <demo></demo>   
+    <router-link to="/home">Go to Foo</router-link>
+    <router-link to="/demo">Go to Bar</router-link>
+    <bar class="home-bar"></bar>
+    <router-view></router-view>
   </div>
 </template>
 
 <script>
+import 'bootstrap/dist/css/bootstrap.min.css'
 import Hello from './components/Hello'
-import Demo from './Demo'
+import Bar from './components/Bar'
 
 export default {
   components: {
-    Hello,
-    Demo
+    Bar
   }
 }
 </script>
@@ -21,12 +22,17 @@ export default {
 <style>
 html {
   height: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+  font-size: 24px;
 }
 body {
   display: flex;
   //align-items: center;
   justify-content: center;
   height: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
 }
 
 #app {
