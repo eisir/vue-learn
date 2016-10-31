@@ -5,6 +5,7 @@ import VueRouter from 'vue-router'
 import VueResource from 'vue-resource'
 import Vuex from 'vuex'
 import App from './App'
+import route from './router/index'
 
 /* eslint-disable no-new */
 
@@ -13,26 +14,13 @@ Vue.http.options.root = '/static';
 Vue.http.headers.common['Authorization'] = 'Basic YXBpOnBhc3N3b3Jk';
 Vue.http.options.emulateJSON = true;
 
+
 Vue.use(Vuex);
 Vue.use(VueRouter);
 
-const routes=[
-	{
-		path: '/home',
-    component(resolve){
-      require(['./views/Home'],resolve);
-    }
-	},
-  {
-    path: '/demo',
-    component(resolve){
-      require(['./views/Demo'],resolve);
-    }
-  }
-];
-const router =new VueRouter({
-  routes
-});
+const router =new VueRouter(route);
+
+
 const app = new Vue({
   router,
   render: h => h(App)
