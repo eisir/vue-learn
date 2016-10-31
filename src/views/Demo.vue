@@ -31,7 +31,7 @@ export default {
   data () {
     return {
       title: 'Demo',
-      bars: ['Cart','Directive','Temp','Count','Forms','Async','Event','Color','Trans','Xhr','Rend'],
+      bars: ['Count','Forms','Cart','Directive','Temp','Async','Event','Color','Trans','Xhr','Rend'],
       isCurrent: ''
       }
   },
@@ -62,12 +62,19 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
+html{
+  font-size: 24px
+}
 h1 {
   color: #42b983;
+  font-size: 3rem;
+}
+h3{
+  font-size: 1rem;
 }
 .demo{
   text-align:left;
-  width:600px
+  /*width:600px;*/
 }
 .h600{
   height:600px;

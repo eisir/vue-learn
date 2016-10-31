@@ -7,6 +7,13 @@
         首页
       </div>
     </router-link>
+    <router-link to="/user" class="item">
+      <span class="icon glyphicon glyphicon-user">
+      </span>
+      <div class="tab-label">
+        User
+      </div>
+    </router-link>
     <router-link to="/demo" class="item">
       <span class="icon glyphicon glyphicon-search">
       </span>
@@ -36,19 +43,21 @@
   bottom: 0;
   width:100%;
   table-layout: fixed;
+  z-index: 10;
+  background-color: #fff
 }
 .icon{
-  font-size: 1.8rem;
+  font-size: 0.625rem;
 }
 .item{
   display: table-cell;
   width: 1%;
   position: relative;
   border-top: 1px solid #eee;
-  height: 4rem;
+  height: 2rem;
   vertical-align: middle;
 }
 .tab-label{
-  font-size: .8rem
+  font-size: .375rem
 }
 </style>
