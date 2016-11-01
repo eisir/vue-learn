@@ -19,6 +19,9 @@ Vue.http.options.emulateJSON = true;
 Vue.use(Vuex);
 Vue.use(VueRouter);
 
+const router = new VueRouter(route);
+
+
 const app = new Vue({
   router,
   ...App

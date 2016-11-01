@@ -34,7 +34,7 @@ export default {
     {
       path: '*',
         component(resolve){
-        require(['../views/Home'],resolve);
+        require(['../views/notfound'],resolve);
       }
     }
   ]
