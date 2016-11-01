@@ -1,12 +1,6 @@
 export default {
-  // mode: 'history',
-  routes: [
-    {
-      path: '*',
-        component(resolve){
-        require(['../views/Home'],resolve);
-      }
-    },
+  mode: 'history',
+  routes: [    
     {
       path: '/',
         component(resolve){
@@ -35,6 +29,12 @@ export default {
       path: '/demo',
       component(resolve){
         require(['../views/Demo'],resolve);
+      }
+    },
+    {
+      path: '*',
+        component(resolve){
+        require(['../views/Home'],resolve);
       }
     }
   ]

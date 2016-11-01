@@ -19,10 +19,12 @@ Vue.http.options.emulateJSON = true;
 Vue.use(Vuex);
 Vue.use(VueRouter);
 
-const router =new VueRouter(route);
-
-
 const app = new Vue({
   router,
-  render: h => h(App)
+  ...App
 }).$mount('#app');
+
+// const app = new Vue({
+//   router,
+//   render: h => h(App)
+// }).$mount('#app');
