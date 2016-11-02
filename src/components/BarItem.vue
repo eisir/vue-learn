@@ -1,5 +1,5 @@
 <template>
-  <router-link :to="path" class="item">
+  <router-link :to="path" class="item" active-class="active">
     <span class="icon glyphicon" :class="iconClass">
     </span>
     <div class="tab-label">
