@@ -1,8 +1,15 @@
 <template>
   <div id="app">
-    <router-link to="/home">Go to Foo</router-link>
-    <router-link to="/demo">Go to Bar</router-link>
-    <bar class="home-bar"></bar>
+    <header-bar>
+      {{topTitle}}
+    </header-bar>
+    <bar class="home-bar">
+      <bar-item v-for="item in navs"
+       :path="item.path"
+       :icon="item.icon"
+       :label="item.label">         
+      </bar-item>
+    </bar>
     <router-view class="container"></router-view>
   </div>
 </template>
@@ -12,10 +19,45 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 import './assets/css/base.css'
 import Hello from './components/Hello'
 import Bar from './components/Bar'
+import BarItem from './components/BarItem'
+import HeaderBar from './components/HeaderBar'
 
 export default {
+  data(){
+    return {
+      topTitle: "首页",
+      navs:[
+        {
+          path:'/',
+          icon:'home',
+          label:'首页'
+        },
+        {
+          path:'/list',
+          icon:'list',
+          label:'列表页'
+        },
+        {
+          path:'/demo',
+          icon:'th',
+          label:'Demo'
+        },
+        {
+          path:'/user',
+          icon:'user',
+          label:'个人中心'
+        },
+      ]
+    }
+  },
   components: {
-    Bar
+    Bar,BarItem,HeaderBar
+  },
+  watch:{
+    '$route'(){
+      this.topTitle = this.$route.name;
+      console.log(this.$route.name);
+    }
   }
 }
 </script>
@@ -28,11 +70,12 @@ html {
 }
 body {
   display: flex;
-  //align-items: center;
+  /*//align-items: center;*/
   justify-content: center;
   height: 100%;
   max-width: 1000px;
   margin: 0 auto;
+  overflow: hidden;
 }
 
 .container{
@@ -40,8 +83,6 @@ body {
 }
 #app {
   color: #2c3e50;
-  margin-top: 10px;
-  max-width: 600px;
   font-family: Source Sans Pro, Helvetica, sans-serif;
   text-align: center;
   position: relative;

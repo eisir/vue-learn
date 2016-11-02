@@ -21,7 +21,6 @@ Vue.use(VueRouter);
 
 const router = new VueRouter(route);
 
-
 const app = new Vue({
   router,
   ...App

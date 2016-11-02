@@ -1,6 +1,7 @@
 <template>
   <nav class="bar">
-    <router-link to="/home" class="item">
+    <slot></slot>
+    <!-- <router-link to="/home" class="item">
       <span class="icon glyphicon glyphicon-home">
       </span>
       <div class="tab-label">
@@ -20,7 +21,7 @@
       <div class="tab-label">
         Demo
       </div>
-    </router-link>
+    </router-link> -->
   </nav>
 </template>
 
