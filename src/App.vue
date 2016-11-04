@@ -56,7 +56,7 @@ export default {
   watch:{
     '$route'(){
       this.topTitle = this.$route.name;
-      console.log(this.$route.name);
+      // console.log(this.$route.name);
     }
   }
 }
