@@ -1,5 +1,5 @@
 export default {
-  mode: 'history',
+  // mode: 'history',
   routes: [    
     {
       path: '/',
@@ -17,23 +17,24 @@ export default {
     },
     {
       path: '/list',
-        component(resolve){
+      component(resolve){
         require(['../views/List'],resolve);
       },
       name:'列表页'
     },
     {
       path: '/user',
-        component(resolve){
+      component(resolve){
         require(['../views/user'],resolve);
       },
-      name:'个人中心'
-    },
+      name:'user',
+    },    
     {
-      path: '/user/:id',
-        component(resolve){
+      path: '/user/:userId',
+      component(resolve){
         require(['../views/user/profile'],resolve);
-      }
+      },
+      name:'profile'
     },
     {
       path: '/demo',
@@ -44,9 +45,16 @@ export default {
     },
     {
       path: '*',
-        component(resolve){
+      component(resolve){
         require(['../views/notfound'],resolve);
       }
     }
-  ]
+  ],
+  scrollBehavior (to, from, savedPosition) {
+    if (savedPosition) {
+      return savedPosition
+    } else {
+      return { x: 0, y: 0 }
+    }
+  }
 };

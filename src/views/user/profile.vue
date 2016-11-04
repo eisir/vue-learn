@@ -1,6 +1,6 @@
 <template>
   <div class="user">
-    this is user  {{ $route.params.id }}
+    this is user  {{ $route.matched }}
   </div>
 </template>
 <script>

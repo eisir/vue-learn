@@ -15,6 +15,7 @@
     methods:{
       back(){
         console.log(this.$route.router)
+        // console.log(this.$route)
         history.go(-1)
       }
     }
