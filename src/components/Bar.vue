@@ -27,12 +27,6 @@
 
 <script>
   export default {
-    data(){
-      return {
-        home:"/home",
-        demo:"/demo"
-      }
-    }
   }
 </script>
 

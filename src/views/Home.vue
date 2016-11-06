@@ -5,9 +5,11 @@
 </template>
 
 <script>
-  export default {
-    computed:{
-
+  export default {    
+    methods: {
+        clickBtn () {
+            console.log('click!');
+        }
     }
   }
 </script>
