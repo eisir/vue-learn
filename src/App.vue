@@ -62,7 +62,8 @@ export default {
 }
 </script>
 
-<style scoped>
+<style>
+@import '~vux/dist/vux.css';
 html {
   height: 100%;
   max-width: 1000px;
